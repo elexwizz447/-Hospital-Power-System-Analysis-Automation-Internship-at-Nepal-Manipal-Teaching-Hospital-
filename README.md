@@ -1,5 +1,5 @@
-# -Hospital-Power-System-Analysis-Automation-Internship-at-Nepal-Manipal-Teaching-Hospital-
-This repository documents the first phase of my Electrical Engineering internship at Manipal Education and Medical Group – Nepal Manipal Teaching Hospital, Pokhara. The work focuses on the real-world analysis and automation of hospital electrical systems, including grid and generator power management.
+
+
 # Hospital Power System Analysis & Automation – Internship at Nepal Manipal Teaching Hospital
 
 This repository showcases the first phase of my Electrical Engineering Internship at **Manipal Education and Medical Group – Nepal Manipal Teaching Hospital**, Pokhara. Under the expert guidance of **Er. Laxman Acharya**, I’ve been immersed in the hands-on analysis, monitoring, and automation of critical hospital power systems.
