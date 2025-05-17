@@ -1,0 +1,100 @@
+// Siemens S7 PLC Bus Coupling Logic
+// Inputs (I/O Mapping to be configured in HW Config)
+VAR_INPUT
+    GRID_STATUS : BOOL;      // I0.0 - 1=Grid Available, 0=Grid Failure
+    DG1_STATUS : BOOL;       // I0.1 - 1=DG1 Available, 0=DG1 Offline
+    DG2_STATUS : BOOL;       // I0.2 - 1=DG2 Available, 0=DG2 Offline
+    LOAD_DEMAND : INT;       // IW0 - Analog load demand (0-100%)
+END_VAR
+
+// Outputs
+VAR_OUTPUT
+    ACB_TX : BOOL;           // Q0.0 - Main Grid ACB
+    ACB_DG1 : BOOL;          // Q0.1 - DG1 ACB
+    ACB_DG2 : BOOL;          // Q0.2 - DG2 ACB
+    BUS_COUPLER : BOOL;      // Q0.3 - Bus Coupler Status
+    ALARM : BOOL;            // Q0.4 - General Alarm
+    MODE_DISPLAY : INT;      // QW2 - Mode indication (1-4)
+END_VAR
+
+// Internal Variables
+VAR
+    TON_GRID_DG : TON;       // Grid-DG transition timer
+    TON_SYNC : TON;          // Synchronization timer
+    CurrentMode : STRING[20]; // Current mode string
+END_VAR
+
+// Main Logic
+BEGIN
+    // Normal Grid Mode
+    IF GRID_STATUS AND NOT DG1_STATUS AND NOT DG2_STATUS THEN
+        ACB_TX := TRUE;
+        ACB_DG1 := FALSE;
+        ACB_DG2 := FALSE;
+        BUS_COUPLER := TRUE;
+        CurrentMode := 'Normal Grid';
+        MODE_DISPLAY := 1;
+        
+    // Grid Failure - Both DGs Active
+    ELSIF NOT GRID_STATUS AND DG1_STATUS AND DG2_STATUS THEN
+        ACB_TX := FALSE;
+        
+        // Start transition timer
+        TON_GRID_DG(IN := TRUE, PT := T#5S);
+        
+        // After 5 second delay
+        IF TON_GRID_DG.Q THEN
+            ACB_DG1 := TRUE;
+            ACB_DG2 := TRUE;
+            BUS_COUPLER := FALSE;
+            
+            // Load shedding logic
+            IF LOAD_DEMAND < 50 THEN
+                ACB_DG2 := FALSE;
+            END_IF;
+        END_IF;
+        
+        CurrentMode := 'Emergency (Both DGs)';
+        MODE_DISPLAY := 2;
+    
+    // DG2 Active Only
+    ELSIF NOT GRID_STATUS AND NOT DG1_STATUS AND DG2_STATUS THEN
+        ACB_TX := FALSE;
+        ACB_DG1 := FALSE;
+        
+        // Start sync timer before closing ACB
+        TON_SYNC(IN := TRUE, PT := T#2S);
+        IF TON_SYNC.Q THEN
+            ACB_DG2 := TRUE;
+            BUS_COUPLER := TRUE;
+        END_IF;
+        
+        CurrentMode := 'DG2 Only';
+        MODE_DISPLAY := 3;
+    
+    // DG1 Active Only
+    ELSIF NOT GRID_STATUS AND DG1_STATUS AND NOT DG2_STATUS THEN
+        ACB_TX := FALSE;
+        ACB_DG2 := FALSE;
+        
+        // Start sync timer before closing ACB
+        TON_SYNC(IN := TRUE, PT := T#2S);
+        IF TON_SYNC.Q THEN
+            ACB_DG1 := TRUE;
+            BUS_COUPLER := TRUE;
+        END_IF;
+        
+        CurrentMode := 'DG1 Only';
+        MODE_DISPLAY := 4;
+    
+    // Fault Condition
+    ELSE
+        ACB_TX := FALSE;
+        ACB_DG1 := FALSE;
+        ACB_DG2 := FALSE;
+        BUS_COUPLER := FALSE;
+        ALARM := TRUE;
+        CurrentMode := 'FAULT: No Source';
+        MODE_DISPLAY := 0;
+    END_IF;
+END_VAR
