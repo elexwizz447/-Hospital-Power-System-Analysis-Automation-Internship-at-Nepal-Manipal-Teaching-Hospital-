@@ -28,18 +28,8 @@ This repository documents the technical tasks and learnings during my Electrical
 - Power system diagrams & analysis  
 - Hands-on work with ACBs, MCCBs, relays, busbars
 
----
-
-## 📌 Folder Structure (Coming Soon)
-I am currently organizing files into subfolders for:
-- `/PythonScripts`
-- `/PLC Logic`
-- `/System Diagrams`
-- `/Reports`
-
----
-
-## 📷 Screenshots & Diagrams (To Be Added)
+## Images
+![Anamolies](images/anamolies.png)
 
 ---
 
