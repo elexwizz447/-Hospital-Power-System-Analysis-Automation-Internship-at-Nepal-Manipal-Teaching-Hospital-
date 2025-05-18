@@ -29,7 +29,7 @@ This repository documents the technical tasks and learnings during my Electrical
 - Hands-on work with ACBs, MCCBs, relays, busbars
 
 ## Images
-![Anamolies](images/anamolies.png)
+![Anamolies](Images/anamolies.png)
 
 ---
 
