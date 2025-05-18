@@ -1,88 +1,53 @@
+# Hospital Power System Analysis & Automation – Internship at Manipal Hospital, Nepal
 
+📍 **Internship Period**: April 20, 2025 – Present  
+🏥 **Institution**: Nepal Manipal Teaching Hospital, Pokhara  
+👨‍🏫 **Mentor**: Er. Laxman Acharya
 
-# Hospital Power System Analysis & Automation – Internship at Nepal Manipal Teaching Hospital
-
-This repository showcases the first phase of my Electrical Engineering Internship at **Manipal Education and Medical Group – Nepal Manipal Teaching Hospital**, Pokhara. Under the expert guidance of **Er. Laxman Acharya**, I’ve been immersed in the hands-on analysis, monitoring, and automation of critical hospital power systems.
-
-Data analysis involving different domains,  PLC logics ,Dataset used to train model and Report produced are included in this repository.
-
- **Internship Start Date**: April 20, 2025  
- **Supervisor**: Er. Laxman Acharya  
- **Location**: Nepal Manipal Teaching Hospital, Pokhara
+## 🔧 Overview
+This repository documents the technical tasks and learnings during my Electrical Engineering Internship at Nepal Manipal Teaching Hospital. It covers real-world projects related to power systems, automation, SCADA, and energy analysis in a hospital environment.
 
 ---
 
-##  Project Objectives
+## 📚 Contents
 
-- Understand and analyze the hospital’s power infrastructure
-- Ensure reliable power supply through automation and priority-based load management
-- Apply PLC and SCADA technologies for real-time monitoring and control
-- Perform data-driven analysis to forecast demand and optimize energy use
-
----
-
-##  Key Tasks & Contributions – Phase 1
-
-1. **Power System Architecture**
-   - Studied the layout of both grid-connected and generator-based backup power
-   - Mapped energy flow and control points
-
-2. **Bus Coupling & ATS**
-   - Analyzed Automatic Transfer Switch (ATS) for seamless transition
-   - Observed real-time switching during outages and recovery
-
-3. **Dual Generator PLC Logic**
-   - Developed PLC logic for non-synchronized generators
-   - Load-based start/stop and priority switching for critical load supply
-
-4. **SCADA Integration**
-   - Evaluated SCADA system for monitoring and control
-   - Integrated generator operations with automated load management
-
-5. **Priority Load Classification**
-   - Classified loads into:
-     - **Tier 1**: Most Essential
-     - **Tier 2**: Essential
-     - **Tier 3**: Non-Essential
-
-6. **Energy Data Analysis**
-   - Collected kWh readings from utility meters
-   - Used Python (`pandas`, `numpy`) for:
-     - Peak load analysis
-     - Short-term demand forecasting
-
-7. **Control Panel Review**
-   - Analyzed switchgear systems:
-     - VCBs, ACBs, MCCBs
-     - Static & electromagnetic relays
-     - Induction disc relays
-   - Reviewed bus bar connections and safety mechanisms
-
-8. **Electrical Drawings**
-   - Created:
-     - Sub-circuit layouts of control room
-     - Single Line Diagrams (SLDs) of power system
+- ⚡ Power system architecture & grid connection analysis  
+- 🔄 Automatic Transfer Switch (ATS) and bus coupler logic  
+- ⚙️ PLC logic for dual-generator load management  
+- 🖥️ SCADA-based automation & real-time data logging  
+- 📊 Energy data analysis using Python (load curves, peak demand)  
+- 💧 Pump house & ETP plant observations  
+- ♻️ Incineration and waste management systems
 
 ---
 
-##  Tools & Technologies
-
-- **PLC Programming**
-- **SCADA Systems**
-- **Python** – `pandas`, `numpy`
-- **Electrical CAD Tools** – for circuit/layout diagrams
-
-
+## 🧠 Key Skills Used
+- Siemens S7-1200 PLC  
+- SCADA software  
+- Python (pandas, numpy, matplotlib)  
+- Power system diagrams & analysis  
+- Hands-on work with ACBs, MCCBs, relays, busbars
 
 ---
 
---
-
-## Acknowledgements
-
-Grateful to **Er. Laxman Acharya** for mentorship and to the entire technical team at Nepal Manipal Teaching Hospital for their support and collaboration.
+## 📌 Folder Structure (Coming Soon)
+I am currently organizing files into subfolders for:
+- `/PythonScripts`
+- `/PLC Logic`
+- `/System Diagrams`
+- `/Reports`
 
 ---
+
+## 📷 Screenshots & Diagrams (To Be Added)
+
+---
+
+## 🙏 Acknowledgment
+Thankful for the opportunity provided by Manipal Hospital and the mentorship of Er. Laxman Acharya.
+
+---
+
 
 ## Contact
 
