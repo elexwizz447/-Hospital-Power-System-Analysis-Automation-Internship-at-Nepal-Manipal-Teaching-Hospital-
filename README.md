@@ -1,42 +1,37 @@
-# Hospital Power System Analysis & Automation – Internship at Manipal Hospital, Nepal
+# ⚡ Hospital Power System Analysis & Automation – Internship at Manipal Hospital, Nepal
 
 📍 **Internship Period**: April 20, 2025 – Present  
 🏥 **Institution**: Nepal Manipal Teaching Hospital, Pokhara  
 👨‍🏫 **Mentor**: Er. Laxman Acharya
 
-## 🔧 Overview
-This repository documents the technical tasks and learnings during my Electrical Engineering Internship at Nepal Manipal Teaching Hospital. It covers real-world projects related to power systems, automation, SCADA, and energy analysis in a hospital environment.
+---
+
+## 🧠 Overview
+
+This repository contains key scripts, notebooks, and datasets developed during my Electrical Engineering internship at Nepal Manipal Teaching Hospital. The main focus is on **energy data analysis**, **load behavior modeling**, and **automation logic** for improving energy efficiency and reliability in a hospital power system.
 
 ---
 
-## 📚 Contents
+## 📊 What This Repository Contains
 
-- ⚡ Power system architecture & grid connection analysis  
-- 🔄 Automatic Transfer Switch (ATS) and bus coupler logic  
-- ⚙️ PLC logic for dual-generator load management  
-- 🖥️ SCADA-based automation & real-time data logging  
-- 📊 Energy data analysis using Python (load curves, peak demand)  
-- 💧 Pump house & ETP plant observations  
-- ♻️ Incineration and waste management systems
+### ✅ **Python-Based Energy Data Analysis**
+- 📈 **Hourly Demand Curve Analysis**  
+  Visualizing how hospital load changes hour-by-hour to understand typical daily profiles.
 
----
+- 📊 **Load Pattern Clustering (K-Means)**  
+  Unsupervised clustering to identify different load behavior patterns across days.
 
-## 🧠 Key Skills Used
-- Siemens S7-1200 PLC  
-- SCADA software  
-- Python (pandas, numpy, matplotlib)  
-- Power system diagrams & analysis  
-- Hands-on work with ACBs, MCCBs, relays, busbars
+- ⚠️ **Energy Consumption Anomaly Detection**  
+  Detecting unusual spikes/dips in usage using statistical thresholds and visual plots.
 
-## Images
-![Anamolies](Images/anamolies.png)
+- ☀️ **Solar vs Non-Solar Hour Analysis**  
+  Differentiating between solar and non-solar powered periods to analyze load dependency on sunlight.
+
+- 🕒 **Peak Demand Profiling**  
+  Identifying when the hospital consumes the most power, and how it varies by day/week.
 
 ---
 
-## 🙏 Acknowledgment
-Thankful for the opportunity provided by Manipal Hospital and the mentorship of Er. Laxman Acharya.
-
----
 
 
 ## Contact
