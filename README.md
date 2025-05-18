@@ -4,6 +4,8 @@
 
 This repository showcases the first phase of my Electrical Engineering Internship at **Manipal Education and Medical Group – Nepal Manipal Teaching Hospital**, Pokhara. Under the expert guidance of **Er. Laxman Acharya**, I’ve been immersed in the hands-on analysis, monitoring, and automation of critical hospital power systems.
 
+Data analysis involving different domains,  PLC logics ,Dataset used to train model and Report produced are included in this repository.
+
  **Internship Start Date**: April 20, 2025  
  **Supervisor**: Er. Laxman Acharya  
  **Location**: Nepal Manipal Teaching Hospital, Pokhara
